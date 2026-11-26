@@ -23,7 +23,16 @@ import os
 # printer, no Monday morning, no reply-all, no meeting-could-have-been-an-
 # email. Runner-up: "The meeting ended early, which HR is now investigating
 # as a possible security incident." (87 characters).
-LINE = "HR said to bring my whole self to work, so I brought my resignation letter too."
+SETUP = "HR said to bring my whole self to work, "
+PUNCHLINE = "so I brought my resignation letter too."
+
+
+def compose_joke(setup: str, punchline: str) -> str:
+    """Assemble the one-liner from its setup and punchline parts."""
+    return f"{setup}{punchline}"
+
+
+LINE = compose_joke(SETUP, PUNCHLINE)
 
 
 def main() -> None:
